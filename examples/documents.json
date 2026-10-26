@@ -1,0 +1,150 @@
+[
+  {
+    "document_type": "email",
+    "text": "De: Marina Costa <marina@acme.example>\nPara: Paulo Nunes <paulo@acme.example>\nAssunto: Aprovação do orçamento\nData: 12/04/2025 09:15\n\nOi Paulo, você consegue aprovar o orçamento da campanha até sexta? A gráfica precisa da confirmação antes de começar. Obrigada!",
+    "expected": {
+      "sender": "Marina Costa <marina@acme.example>",
+      "recipients": ["Paulo Nunes <paulo@acme.example>"],
+      "subject": "Aprovação do orçamento",
+      "sent_at": "2025-04-12T09:15:00",
+      "summary": "Marina pede a aprovação do orçamento da campanha até sexta-feira para que a gráfica possa começar.",
+      "action_items": ["Aprovar o orçamento da campanha até sexta-feira"],
+      "urgency": "normal"
+    }
+  },
+  {
+    "document_type": "email",
+    "text": "From: billing@cloudbox.example\nSubject: Your invoice is ready (INV-8842)\n\nHello Sam, invoice INV-8842 for USD 129.00 is due on 2025-06-30. Pay through the customer portal. This is an automated message.",
+    "expected": {
+      "sender": "billing@cloudbox.example",
+      "recipients": [],
+      "subject": "Your invoice is ready (INV-8842)",
+      "sent_at": null,
+      "summary": "Cloudbox informa que a fatura INV-8842 de USD 129.00 vence em 30 de junho de 2025.",
+      "action_items": ["Pagar a fatura INV-8842 até 2025-06-30"],
+      "urgency": "normal"
+    }
+  },
+  {
+    "document_type": "email",
+    "text": "From: Leo <leo@studio.example>\nTo: team@studio.example\nSubject: URGENT - server down\n\nCheckout is failing since 14:20 UTC. Please check the payment service now and post an update in #incident. I can help with rollback.",
+    "expected": {
+      "sender": "Leo <leo@studio.example>",
+      "recipients": ["team@studio.example"],
+      "subject": "URGENT - server down",
+      "sent_at": null,
+      "summary": "Leo relata falhas no checkout desde 14:20 UTC e solicita investigação imediata do serviço de pagamentos.",
+      "action_items": ["Verificar o serviço de pagamentos", "Publicar uma atualização em #incident"],
+      "urgency": "high"
+    }
+  },
+  {
+    "document_type": "resume",
+    "text": "Joana Lima | joana.lima@example.com | +55 11 98888-1234 | São Paulo, SP\nProduct designer with 6 years building accessible mobile products.\nEXPERIENCE: Pixel Norte — Senior Product Designer (2022–present); led design system and research. Maré Apps — Product Designer (2019–2022); redesigned onboarding.\nEDUCATION: B.A. Design, Universidade Federal do Paraná, 2015–2018.\nSkills: Figma, prototyping, user research, accessibility",
+    "expected": {
+      "full_name": "Joana Lima",
+      "email": "joana.lima@example.com",
+      "phone": "+55 11 98888-1234",
+      "location": "São Paulo, SP",
+      "professional_summary": "Product designer with 6 years of experience building accessible mobile products.",
+      "skills": ["Figma", "prototyping", "user research", "accessibility"],
+      "experience": [
+        {"company": "Pixel Norte", "role": "Senior Product Designer", "start_date": "2022-01-01", "end_date": null, "description": "Led design system and research."},
+        {"company": "Maré Apps", "role": "Product Designer", "start_date": "2019-01-01", "end_date": "2022-01-01", "description": "Redesigned onboarding."}
+      ],
+      "education": [
+        {"institution": "Universidade Federal do Paraná", "degree": "B.A.", "field_of_study": "Design", "start_date": "2015-01-01", "end_date": "2018-01-01"}
+      ]
+    }
+  },
+  {
+    "document_type": "resume",
+    "text": "MARCOS ALMEIDA\nmarcos.almeida@example.org | Recife - PE\nSUMMARY: Data analyst, 4 years in retail analytics and reporting.\nSkills: SQL, Python, Power BI, Excel\nWork: Varejo Solar, Data Analyst, Jan 2021 - Dec 2024. Automated weekly sales reports.\nEducation: Statistics, Universidade de Pernambuco, 2016-2020.",
+    "expected": {
+      "full_name": "Marcos Almeida",
+      "email": "marcos.almeida@example.org",
+      "phone": null,
+      "location": "Recife, PE",
+      "professional_summary": "Data analyst with 4 years of experience in retail analytics and reporting.",
+      "skills": ["SQL", "Python", "Power BI", "Excel"],
+      "experience": [
+        {"company": "Varejo Solar", "role": "Data Analyst", "start_date": "2021-01-01", "end_date": "2024-12-01", "description": "Automated weekly sales reports."}
+      ],
+      "education": [
+        {"institution": "Universidade de Pernambuco", "degree": null, "field_of_study": "Statistics", "start_date": "2016-01-01", "end_date": "2020-01-01"}
+      ]
+    }
+  },
+  {
+    "document_type": "resume",
+    "text": "Aisha Rahman • aisha.r@example.net • Toronto, ON\nOperations coordinator focused on logistics and vendor management.\nEMPLOYMENT: Northstar Foods | Operations Coordinator | 2020–2023 | Managed 12 suppliers and monthly inventory.\nEDUCATION: Diploma, Supply Chain Management, George Brown College, 2018–2020.\nTools: SAP, Excel, French, negotiation",
+    "expected": {
+      "full_name": "Aisha Rahman",
+      "email": "aisha.r@example.net",
+      "phone": null,
+      "location": "Toronto, ON",
+      "professional_summary": "Operations coordinator focused on logistics and vendor management.",
+      "skills": ["SAP", "Excel", "French", "negotiation"],
+      "experience": [
+        {"company": "Northstar Foods", "role": "Operations Coordinator", "start_date": "2020-01-01", "end_date": "2023-01-01", "description": "Managed 12 suppliers and monthly inventory."}
+      ],
+      "education": [
+        {"institution": "George Brown College", "degree": "Diploma", "field_of_study": "Supply Chain Management", "start_date": "2018-01-01", "end_date": "2020-01-01"}
+      ]
+    }
+  },
+  {
+    "document_type": "invoice",
+    "text": "NOTA FISCAL / INVOICE\nFornecedor: Papelaria Horizonte Ltda.\nCNPJ: 12.345.678/0001-90\nNº 2025-00418 | Emissão: 2025-04-08 | Vencimento: 2025-05-08\n2 x Caderno A4 @ R$ 25,00 = R$ 50,00\n1 x Caneta azul @ R$ 5,00 = R$ 5,00\nSubtotal R$ 55,00 | ISS R$ 2,75 | TOTAL R$ 57,75",
+    "expected": {
+      "vendor": "Papelaria Horizonte Ltda.",
+      "invoice_number": "2025-00418",
+      "issue_date": "2025-04-08",
+      "due_date": "2025-05-08",
+      "currency": "BRL",
+      "subtotal": "55.00",
+      "tax": "2.75",
+      "total": "57.75",
+      "line_items": [
+        {"description": "Caderno A4", "quantity": "2", "unit_price": "25.00", "amount": "50.00"},
+        {"description": "Caneta azul", "quantity": "1", "unit_price": "5.00", "amount": "5.00"}
+      ]
+    }
+  },
+  {
+    "document_type": "invoice",
+    "text": "ACME OFFICE SUPPLY\nInvoice # A-9917\nIssued 03/15/2025  Due 04/14/2025\nUSB-C Docking Station     3    $89.50    $268.50\nShipping                   1    $12.00    $12.00\nSubtotal $280.50 | Tax $22.44 | Amount due $302.94 USD",
+    "expected": {
+      "vendor": "ACME OFFICE SUPPLY",
+      "invoice_number": "A-9917",
+      "issue_date": "2025-03-15",
+      "due_date": "2025-04-14",
+      "currency": "USD",
+      "subtotal": "280.50",
+      "tax": "22.44",
+      "total": "302.94",
+      "line_items": [
+        {"description": "USB-C Docking Station", "quantity": "3", "unit_price": "89.50", "amount": "268.50"},
+        {"description": "Shipping", "quantity": "1", "unit_price": "12.00", "amount": "12.00"}
+      ]
+    }
+  },
+  {
+    "document_type": "invoice",
+    "text": "Factura simplificada - Café Plaza\nNo. F-7781\nFecha 2025/02/21\n1 x Coffee beans 1kg: EUR 18,90\n2 x Ceramic mug: EUR 7,50 each, EUR 15,00\nTax included: EUR 6,22\nTOTAL: EUR 33,90\nPayment due upon receipt",
+    "expected": {
+      "vendor": "Café Plaza",
+      "invoice_number": "F-7781",
+      "issue_date": "2025-02-21",
+      "due_date": null,
+      "currency": "EUR",
+      "subtotal": "27.68",
+      "tax": "6.22",
+      "total": "33.90",
+      "line_items": [
+        {"description": "Coffee beans 1kg", "quantity": "1", "unit_price": "18.90", "amount": "18.90"},
+        {"description": "Ceramic mug", "quantity": "2", "unit_price": "7.50", "amount": "15.00"}
+      ]
+    }
+  }
+]

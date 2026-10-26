@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="720" viewBox="0 0 1200 720">
+  <rect width="1200" height="720" rx="24" fill="#f3f6fb"/>
+  <text x="60" y="72" font-family="Arial,sans-serif" font-size="34" font-weight="700" fill="#12243a">Structured Data Extractor</text>
+  <text x="60" y="108" font-family="Arial,sans-serif" font-size="17" fill="#607086">Entrada bagunçada → extração validada com Pydantic</text>
+  <rect x="55" y="145" width="505" height="515" rx="16" fill="#fff" stroke="#d9e1eb"/>
+  <text x="85" y="190" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#263b53">Entrada · e-mail</text>
+  <text x="85" y="235" font-family="Consolas,monospace" font-size="16" fill="#34465a">
+    <tspan x="85" dy="0">From: Leo &lt;leo@studio.example&gt;</tspan>
+    <tspan x="85" dy="28">To: team@studio.example</tspan>
+    <tspan x="85" dy="28">Subject: URGENT - server down</tspan>
+    <tspan x="85" dy="44">Checkout is failing since 14:20 UTC.</tspan>
+    <tspan x="85" dy="28">Please check the payment service now</tspan>
+    <tspan x="85" dy="28">and post an update in #incident.</tspan>
+    <tspan x="85" dy="28">I can help with rollback.</tspan>
+  </text>
+  <rect x="590" y="145" width="555" height="515" rx="16" fill="#10243b"/>
+  <text x="620" y="190" font-family="Arial,sans-serif" font-size="22" font-weight="700" fill="#e7f0ff">Saída · JSON validado</text>
+  <text x="620" y="235" font-family="Consolas,monospace" font-size="15" fill="#b9e7d0">
+    <tspan x="620" dy="0">{</tspan>
+    <tspan x="642" dy="25">"sender": "Leo &lt;leo@studio.example&gt;",</tspan>
+    <tspan x="642" dy="25">"recipients": ["team@studio.example"],</tspan>
+    <tspan x="642" dy="25">"subject": "URGENT - server down",</tspan>
+    <tspan x="642" dy="25">"sent_at": null,</tspan>
+    <tspan x="642" dy="25">"summary": "Checkout falha desde 14:20 UTC;</tspan>
+    <tspan x="642" dy="22">serviço de pagamentos requer atenção.",</tspan>
+    <tspan x="642" dy="25">"action_items": [</tspan>
+    <tspan x="665" dy="22">"Verificar o serviço de pagamentos",</tspan>
+    <tspan x="665" dy="22">"Atualizar #incident"</tspan>
+    <tspan x="642" dy="25">],</tspan>
+    <tspan x="642" dy="25">"urgency": "high"</tspan>
+    <tspan x="620" dy="25">}</tspan>
+  </text>
+  <rect x="620" y="590" width="225" height="35" rx="17" fill="#173f36"/>
+  <text x="638" y="614" font-family="Arial,sans-serif" font-size="14" fill="#9fe3be">✓ Schema EmailExtraction</text>
+</svg>
